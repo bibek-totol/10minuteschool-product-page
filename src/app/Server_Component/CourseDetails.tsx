@@ -36,13 +36,13 @@ export async function CourseDetails() {
           <AccordionItem value={`item-${index + 1}`} key={index} className="mb-4">
             <AccordionTrigger className="font-semibold text-lg text-gray-800">
               <div
-                dangerouslySetInnerHTML={{ __html: courseDetail.title }}
+                dangerouslySetInnerHTML={{ __html: courseDetail.title || "" }}
               />
             </AccordionTrigger>
             <AccordionContent className="text-gray-800">
               <ul
                 className="list-disc pl-6 space-y-2"
-                dangerouslySetInnerHTML={{ __html: courseDetail.description }}
+                dangerouslySetInnerHTML={{ __html: courseDetail.description || "" }}
               />
             </AccordionContent>
           </AccordionItem>
