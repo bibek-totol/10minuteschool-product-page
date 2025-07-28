@@ -2,8 +2,13 @@ import Image from "next/image";
 import { getApiData } from "../lib/api/getApiData";
 import { Section, SectionValue } from "../types/ielts-course-types";
 
-export default async function Course() {
-  const apidata  = await getApiData();
+type Props = {
+  lang: string;
+};
+
+
+export default async function Course( { lang }: Props ) {
+  const apidata  = await getApiData(lang);
   const { data }  = apidata;
 
   const featuresSection = data.sections.find((section: Section) => section.type === "features");

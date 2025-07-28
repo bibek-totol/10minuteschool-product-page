@@ -8,9 +8,15 @@ import { getApiData } from "../lib/api/getApiData";
 import PriceCard from "../Client_Component/PriceCard";
 
 
-export default async function Banner (){
+type Props = {
+  lang: string;
+};
 
-  const apidata = await getApiData();
+
+
+export default async function Banner ( { lang }: Props ) {
+
+  const apidata = await getApiData(lang);
   console.log(apidata);
   const { data } = apidata;
   
@@ -31,6 +37,12 @@ export default async function Banner (){
         
         
         <div className="mb-[350px] text-white max-w-xl">
+
+
+
+
+
+
           <h1 className="text-xl sm:text-2xl md:text-4xl font-bold mb-3">{data?.title}</h1>
 
           <div className="mb-3 flex gap-3 items-center flex-wrap">

@@ -3,8 +3,13 @@ import Image from "next/image";
 import { getApiData } from "../lib/api/getApiData";
 import { Section, SectionValue } from "../types/ielts-course-types";
 
-export async function CourseExclusiveFeature() {
-  const apidata = await getApiData();
+type Props = {
+    lang: string;
+  };
+  
+
+export async function CourseExclusiveFeature( { lang }: Props ) {
+  const apidata = await getApiData( lang ); 
   const { data } = apidata;
   const courseExclusiveSection = data.sections.find(
     (section: Section) => section.type === "feature_explanations"
