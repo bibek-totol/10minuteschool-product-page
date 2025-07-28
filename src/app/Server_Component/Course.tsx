@@ -58,7 +58,7 @@ export default async function Course() {
 
 
 
-      {/* Free PDF Section */}
+    
       <div
         className="rounded-2xl p-6 text-white flex flex-col lg:flex-row justify-between items-center gap-6 bg-cover bg-center"
         style={{

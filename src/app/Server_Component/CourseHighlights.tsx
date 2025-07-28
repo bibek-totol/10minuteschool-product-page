@@ -3,14 +3,6 @@ import { Check } from "lucide-react";
 import { getApiData } from "../lib/api/getApiData";
 import { Section, SectionValue } from "../types/ielts-course-types";
 
-const points = [
-  "IELTS পরীক্ষার প্রস্তুত সেকশনের প্রশ্ন ও উত্তরের ধরন, টাইম ম্যানেজমেন্ট সম্পর্কের্ণ গুরুত্বপূর্ণ টিপস, ট্রিকস ও স্ট্রেটেজি",
-  "IELTS Speaking test-এ Advanced/Power Words ব্যবহার করে কোনো ট্রিকে নিংদুষ্টভাবে কথা বলার প্রবৃতি",
-  "IELTS পরীক্ষা চালাকাল নির্ধারিত সময়ের সঠিক ব্যবহারের মাধ্যমে ভালো স্কোর অর্জননের কৌশল",
-  "IELTS Writing Task 1 ও IELTS Writing Task 2 এর ক্ষেত্র ভালো স্কোর পেতে সহায়ক Structure ও Essay type",
-  "সেরা IELTS প্রস্তুতি নিতে প্ৰতিটি মুডিউল-নির্দেশ-কলপাতে সৃক্তিগ বিষয়াবী নিয়ে বিস্তারিত ধারণা",
-  "IELTS Reading এবং IELTS Listening Mock Test এর মাধ্যমে IELTS পরীক্ষা বিষয়ে এক্সপার্ট গাইড ও Band Score সম্পর্কে পোর্ণ্ণ ধারণা"
-];
 
 export default async function CourseHighlights () {
     const apidata  = await getApiData();

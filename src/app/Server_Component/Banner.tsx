@@ -27,7 +27,7 @@ export default async function Banner (){
       <Image className="relative z-10 w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px]" src={bg} alt="Main Banner" />
 
       
-      <div className="relative z-20 bottom-[370px] flex flex-col lg:flex-row  justify-center items-center md:items-center gap-6 px-4 sm:px-8 md:px-16 lg:px-20 pt-6 md:pt-0">
+      <div className="relative z-20 bottom-[370px] flex flex-col lg:flex-row  justify-center items-center md:items-center gap-60 px-4 sm:px-8 md:px-16 lg:px-20 pt-6 md:pt-0">
         
         
         <div className="mb-[350px] text-white max-w-xl">
