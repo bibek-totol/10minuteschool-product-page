@@ -14,9 +14,9 @@ type Props = {
 
 
 
-export default async function Banner ( { lang }: Props ) {
+export default async function Banner (  ) {
 
-  const apidata = await getApiData(lang);
+  const apidata = await getApiData();
   console.log(apidata);
   const { data } = apidata;
   

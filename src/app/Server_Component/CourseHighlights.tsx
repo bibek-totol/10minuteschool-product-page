@@ -3,13 +3,11 @@ import { Check } from "lucide-react";
 import { getApiData } from "../lib/api/getApiData";
 import { Section, SectionValue } from "../types/ielts-course-types";
 
-type Props = {
-  lang: string;
-};
 
 
-export default async function CourseHighlights ( { lang }: Props ) {
-    const apidata  = await getApiData( lang );
+
+export default async function CourseHighlights () {
+    const apidata  = await getApiData();
   const { data }  = apidata;
 
   const pointerSection = data.sections.find((section: Section) => section.type === "pointers");

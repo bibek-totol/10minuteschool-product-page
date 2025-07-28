@@ -1,4 +1,4 @@
-export async function getApiData(lang: string = 'en') {
+export async function getApiData(lang: string = 'bn') {
 
     const url = `https://api.10minuteschool.com/discovery-service/api/v1/products/ielts-course?lang=${lang}`;
      const res = await fetch(url);

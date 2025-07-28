@@ -9,13 +9,11 @@ import {
 import { getApiData } from "../lib/api/getApiData";
 import { Section, SectionValue } from "../types/ielts-course-types";
 
-type Props = {
-    lang: string;
-  };
+
   
 
-export async function CourseDetails( { lang }: Props ) {
-  const apidata = await getApiData( lang );
+export async function CourseDetails() {
+  const apidata = await getApiData();
   const { data } = apidata;
   const courseDetailsSection = data.sections.find(
     (section: Section) => section.type === "about"
