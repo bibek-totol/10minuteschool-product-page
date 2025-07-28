@@ -5,7 +5,7 @@ import top from "../../../public/assets/bannertop.jpeg";
 import { FaStar } from "react-icons/fa";
 
 import { getApiData } from "../lib/api/getApiData";
-import PriceCard from "./PriceCard";
+import PriceCard from "../Client_Component/PriceCard";
 
 
 export default async function Banner (){
