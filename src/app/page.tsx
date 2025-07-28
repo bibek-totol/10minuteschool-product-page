@@ -1,13 +1,15 @@
 import Banner from "./Component/Banner";
 import Course from "./Component/Course";
+import CourseHighlights from "./Component/CourseHighlights";
 
 
 export default function Home() {
   
   return (
-    <div className="min-h-screen max-w-full mx-auto md:max-w-screen lg:max-w-[1550px] border-2 border-black">
+    <div className="min-h-screen w-full overflow-x-hidden  mx-auto">
     <Banner/>
     <Course/>
+    <CourseHighlights/>
      
      
     </div>
