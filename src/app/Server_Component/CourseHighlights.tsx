@@ -1,5 +1,7 @@
 
-import { CheckCircle2 } from "lucide-react";
+import { Check } from "lucide-react";
+import { getApiData } from "../lib/api/getApiData";
+import { Section, SectionValue } from "../types/ielts-course-types";
 
 const points = [
   "IELTS পরীক্ষার প্রস্তুত সেকশনের প্রশ্ন ও উত্তরের ধরন, টাইম ম্যানেজমেন্ট সম্পর্কের্ণ গুরুত্বপূর্ণ টিপস, ট্রিকস ও স্ট্রেটেজি",
@@ -10,17 +12,23 @@ const points = [
   "IELTS Reading এবং IELTS Listening Mock Test এর মাধ্যমে IELTS পরীক্ষা বিষয়ে এক্সপার্ট গাইড ও Band Score সম্পর্কে পোর্ণ্ণ ধারণা"
 ];
 
-const CourseHighlights = () => {
+export default async function CourseHighlights () {
+    const apidata  = await getApiData();
+  const { data }  = apidata;
+
+  const pointerSection = data.sections.find((section: Section) => section.type === "pointers");
+  const pointers: SectionValue[] = pointerSection?.values || [];
+
   return (
     <div className="relative bottom-[700px] left-36">
      <h2 className="col-span-full text-xl font-semibold text-gray-800 mb-2">
-        কোর্সটি করে যা শিখবেন
+        {pointerSection.name}
       </h2>
-    <div className="bg-white rounded-xl border p-6 shadow-md max-w-2xl  grid md:grid-cols-2 gap-6">
-      {points.map((point, index) => (
+    <div className="bg-white rounded-xl border p-5 shadow-md max-w-2xl  grid md:grid-cols-2 gap-6">
+      {pointers.map((pointer, index) => (
         <div key={index} className="flex items-start space-x-2">
-          <CheckCircle2 className="text-blue-600 mt-1 w-5 h-5" />
-          <p className="text-gray-700 leading-relaxed">{point}</p>
+          <Check className="text-blue-600 mt-1 w-10 h-10" />
+          <p className="text-gray-700 leading-relaxed">{pointer.text}</p>
         </div>
       ))}
     </div>
@@ -28,4 +36,4 @@ const CourseHighlights = () => {
   );
 };
 
-export default CourseHighlights;
+

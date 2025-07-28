@@ -1,6 +1,7 @@
-import Banner from "./Component/Banner";
-import Course from "./Component/Course";
-import CourseHighlights from "./Component/CourseHighlights";
+import Banner from "./Server_Component/Banner";
+import Course from "./Server_Component/Course";
+import { CourseDetails } from "./Server_Component/CourseDetails";
+import CourseHighlights from "./Server_Component/CourseHighlights";
 
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
     <Banner/>
     <Course/>
     <CourseHighlights/>
-     
+     <CourseDetails/>
      
     </div>
   );
