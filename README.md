@@ -1,3 +1,5 @@
+# Live Site Link: https://10minuteschool-product-page-xxu6.vercel.app/
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
