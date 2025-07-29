@@ -15,12 +15,13 @@ pnpm dev
 # or
 bun dev
 ```
+# Project UI(Focused)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+![Screenshot_12](https://github.com/user-attachments/assets/e2e33a3a-18de-4189-a270-65733b318cbe)
+![Screenshot_13](https://github.com/user-attachments/assets/35c5f051-e3d1-413f-9275-ba59cb9cd9fa)
+![Screenshot_14](https://github.com/user-attachments/assets/687301b7-cc2c-4da2-94cd-29ec3c38948f)
+![Screenshot_15](https://github.com/user-attachments/assets/02790479-4ef1-40e7-b548-f1173e92f76b)
+![Screenshot_16](https://github.com/user-attachments/assets/d813879d-4492-4600-bea4-2bcb56ea6874)
 
 ## Learn More
 
