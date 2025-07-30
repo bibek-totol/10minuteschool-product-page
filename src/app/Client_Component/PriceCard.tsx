@@ -40,7 +40,7 @@ export default function PriceCard() {
       <div className="custom-prev absolute top-30  z-10 transform -translate-y-1/2  bg-opacity-50 text-white p-2  cursor-pointer hover:bg-opacity-80">
       <CircleChevronLeft className="w-10 h-10"  />
   </div>
-  <div className="custom-next absolute  top-30 right-[370px] z-10 transform -translate-y-1/2  bg-opacity-50 text-white p-2  cursor-pointer hover:bg-opacity-80">
+  <div className="custom-next absolute  top-30 right-[190px] z-10 transform -translate-y-1/2  bg-opacity-50 text-white p-2  cursor-pointer hover:bg-opacity-80">
   <CircleChevronRight className="w-10 h-10" />
   </div>
 
