@@ -34,11 +34,11 @@ export default function PriceCard() {
   return (
     
     <div className="w-full md:mx-auto md:mt-12 max-w-[350px] bg-white shadow-xl overflow-hidden border border-gray-200 mx-auto sm:mx-0">
-    <div className="custom-prev absolute top-[30%] left-2 z-10">
-      <CircleChevronLeft className="w-8 h-8" />
+    <div className="custom-prev absolute top-[17%] left-[67%] z-10">
+      <CircleChevronLeft className="w-8 h-8 text-white" />
     </div>
-    <div className="custom-next absolute top-[30%] right-2 z-10">
-      <CircleChevronRight className="w-8 h-8" />
+    <div className="custom-next absolute top-[17%] right-[11%] right-2 z-10">
+      <CircleChevronRight  className="w-8 h-8 text-white " />
     </div>
 
 
