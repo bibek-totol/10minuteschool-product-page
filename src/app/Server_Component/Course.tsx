@@ -18,7 +18,7 @@ export default async function Course(  ) {
   console.log(group_join_engagement);
 
   return (
-    <section className="w-full max-w-2xl px-4 py-10 space-y-10 relative bottom-[700px] left-36">
+    <section className="w-full max-w-2xl px-4 py-10 space-y-10 relative bottom-[850px] left-36">
      
       <div>
         <h2 className="text-xl font-semibold mb-3">কোর্স ইন্সট্রাক্টর</h2>
