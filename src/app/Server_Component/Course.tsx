@@ -15,22 +15,20 @@ export default async function Course(  ) {
   const group_join_engagement_section = data.sections.find((section: Section) => section.type === "group_join_engagement");
   const group_join_engagement: SectionValue[] = group_join_engagement_section?.values || [];
 
-  console.log(group_join_engagement);
-
   return (
-    <section className="w-full max-w-2xl px-4 py-10 space-y-10 relative bottom-[850px] left-36">
-     
-      <div>
-        <h2 className="text-xl font-semibold mb-3">কোর্স ইন্সট্রাক্টর</h2>
-        <div className="bg-white border rounded-xl p-4 flex items-center gap-4">
+<section className="max-w-2xl sticky lg:relative left-30 top-0 lg:top-[-470px] px-4 py-4 space-y-10">
+  <div className="space-y-6">
+    <h2 className="text-xl font-semibold">Instructor</h2>
+    <div className="bg-white border shadow-xl rounded-xl p-4 flex flex-col sm:flex-row items-center gap-4">
+      
           <Image
             src={data.sections[2].values[0].image}
             alt="Munzereen Shahid"
-            className="w-16 h-16 rounded-full object-cover"
+            className="w-20 h-20 rounded-full object-cover"
             width={100}
             height={100}
           />
-          <div>
+         <div className="text-center sm:text-left">
             <h3 className="text-md font-semibold">Munzereen Shahid</h3>
             <p className="text-sm text-gray-700 leading-5">
               MSc (English), University of Oxford (UK);<br />
@@ -43,8 +41,8 @@ export default async function Course(  ) {
 
       
       <div>
-        <h2 className="text-xl font-semibold mb-4">{featuresSection.name}</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-[#0f172a] text-white p-12 rounded-2xl">
+      <h2 className="text-xl font-semibold mb-4">{featuresSection.name}</h2>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 bg-[#0f172a] text-white p-6 sm:p-12 rounded-2xl">
           {features.map((item: any, index: number) => (
             <div key={index} className="flex items-start gap-4">
               <img src={item.icon} alt={item.title} className="w-8 h-8 mt-1" />
@@ -73,6 +71,7 @@ export default async function Course(  ) {
          alt="PDF icon"
         width={200}
          height={200}
+
          />
           <h3 className="text-lg font-semibold mb-2"> {group_join_engagement[0].title}</h3>
           <p className="text-sm mb-4">

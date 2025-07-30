@@ -23,7 +23,6 @@ export default function PriceCard() {
           "https://api.10minuteschool.com/discovery-service/api/v1/products/ielts-course"
         );
         const json = await response.json();
-        console.log("Response JSON:", json);
         setdata(json);
       } catch (err) {
         console.error("Fetch error:", err);
@@ -33,16 +32,14 @@ export default function PriceCard() {
   }, []);
 
   return (
-    <div className="">
-      <div className="w-[350px]  left-1/2   bg-white shadow-xl  overflow-hidden border border-gray-200  ">
-
-
-      <div className="custom-prev absolute top-30  z-10 transform -translate-y-1/2  bg-opacity-50 text-white p-2  cursor-pointer hover:bg-opacity-80">
-      <CircleChevronLeft className="w-10 h-10"  />
-  </div>
-  <div className="custom-next absolute  top-30 right-[190px] z-10 transform -translate-y-1/2  bg-opacity-50 text-white p-2  cursor-pointer hover:bg-opacity-80">
-  <CircleChevronRight className="w-10 h-10" />
-  </div>
+    
+    <div className="w-full md:mx-auto md:mt-12 max-w-[350px] bg-white shadow-xl overflow-hidden border border-gray-200 mx-auto sm:mx-0">
+    <div className="custom-prev absolute top-[30%] left-2 z-10">
+      <CircleChevronLeft className="w-8 h-8" />
+    </div>
+    <div className="custom-next absolute top-[30%] right-2 z-10">
+      <CircleChevronRight className="w-8 h-8" />
+    </div>
 
 
       <Swiper
@@ -145,8 +142,8 @@ export default function PriceCard() {
             This course includes:
           </h3>
           <ul className="space-y-2 text-sm text-gray-700">
-            {apidata?.data?.checklist?.map((coursefeature: any) => (
-              <li className="flex items-center gap-2">
+            {apidata?.data?.checklist?.map((coursefeature: any, index: number) => (
+              <li key={index} className="flex items-center gap-2">
                 <img
                   src={coursefeature.icon}
                   className="w-4 h-4 text-green-600"
@@ -157,6 +154,6 @@ export default function PriceCard() {
           </ul>
         </div>
       </div>
-    </div>
+    
   );
 }

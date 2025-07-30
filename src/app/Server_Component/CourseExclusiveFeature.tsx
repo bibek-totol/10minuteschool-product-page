@@ -13,14 +13,11 @@ export async function CourseExclusiveFeature( ) {
   );
   const courseExclusive: SectionValue[] = courseExclusiveSection?.values || [];
   return (
-    <div className="relative bottom-[610px] left-36">
-      <h2 className="text-xl font-semibold text-gray-800">
-        {courseExclusiveSection?.name}
-      </h2>
-
-      <div className="mt-6 max-w-2xl  p-6 bg-white rounded-xl shadow border space-y-10 ">
-        {courseExclusive.map((item, index) => (
-          <div className="grid md:grid-cols-3 gap-6 items-start">
+    <div className="mt-8 max-w-2xl sticky lg:relative left-30 top-0  lg:top-[-440px]  px-4 ">
+  <h2 className="text-xl font-semibold mb-4">{courseExclusiveSection?.name}</h2>
+  <div className="space-y-10 bg-white p-6 rounded-xl shadow border">
+        {courseExclusive.map((item, index: number) => (
+          <div key={index} className="grid md:grid-cols-3 gap-6 items-start">
             <div className="md:col-span-2 space-y-3">
               <h3 className="font-semibold text-gray-800">{item.title}</h3>
               <ul className="list-none space-y-2">
