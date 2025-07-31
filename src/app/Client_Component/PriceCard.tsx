@@ -33,15 +33,15 @@ export default function PriceCard() {
 
   return (
     
-    <div className="w-full md:mx-auto md:mt-12 max-w-[350px] bg-white shadow-xl overflow-hidden border border-gray-200 mx-auto sm:mx-0">
+    <div className="w-full md:mx-auto md:mt-12 max-w-[350px] bg-white shadow-xl overflow-hidden border border-gray-200 mx-auto sm:mx-0 relative">
   
-<div className="custom-prev absolute top-[36%] lg:top-[18%] left-[9%]  md:left-[28%] lg:left-[67%] z-10 px-2 md:px-0 lg:px-0">
-  <CircleChevronLeft className="w-7 h-7 sm:w-8 sm:h-8 text-cyan-400 drop-shadow-md" />
+<div className="custom-prev absolute top-[14%] lg:top-[14%] left-[3%]  md:left-[3%] lg:left-[2%] z-10  bg-white rounded-full w-[28px]">
+  <CircleChevronLeft className="w-7 h-7 sm:w-8 sm:h-8 text-black drop-shadow-md" />
 </div>
 
 
-<div className="custom-next absolute top-[36%] lg:top-[18%] right-[9%]  md:right-[28%] lg:right-[11%] z-10 px-2 md:px-0 lg:px-0">
-  <CircleChevronRight className="w-7 h-7 sm:w-8 sm:h-8 text-cyan-400 drop-shadow-md" />
+<div className="custom-next absolute top-[14%] lg:top-[14%] right-[3%]  md:right-[3%] lg:right-[3%] z-10 bg-white rounded-full w-[28px]">
+  <CircleChevronRight className="w-7 h-7 sm:w-8 sm:h-8 text-black drop-shadow-md" />
 </div>
 
 

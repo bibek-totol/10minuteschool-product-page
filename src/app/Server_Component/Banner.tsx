@@ -33,7 +33,7 @@ export default async function Banner (  ) {
 
       
       <div className="relative z-20 -mt-[200px] sm:-mt-[250px] md:-mt-[300px] lg:-mt-[340px] flex flex-col lg:flex-row justify-center  gap-10 lg:gap-60 px-4 sm:px-8 md:px-16 lg:px-20 pt-6 md:pt-0">
-  <div className="text-white max-w-xl mb-6 lg:mb-0 lg:mr-10">
+  <div className="text-white max-w-xl mb-6 lg:mb-0 lg:mr-10 ">
     <h1 className="text-xl sm:text-2xl md:text-4xl font-bold mb-3">{data?.title}</h1>
     <div className="mb-3 flex gap-3 items-center flex-wrap">
             <div className="flex gap-1">
