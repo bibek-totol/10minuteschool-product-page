@@ -21,7 +21,7 @@ export async function CourseDetails() {
   const courseDetails: SectionValue[] = courseDetailsSection?.values || [];
 
   return (
-    <div className="max-w-2xl sticky lg:relative left-30 top-0  lg:top-[-440px]  px-4 py-6">
+    <div className="max-w-2xl sticky lg:relative left-30 top-0  lg:top-[-550px]  px-4 py-6">
 
       <h2 className="text-xl font-semibold mb-3">
         {courseDetailsSection?.name}

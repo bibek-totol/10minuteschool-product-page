@@ -14,7 +14,7 @@ export default async function CourseHighlights () {
   const pointers: SectionValue[] = pointerSection?.values || [];
 
   return (
-    <div className="max-w-2xl sticky lg:relative left-30 top-0  lg:top-[-440px]   px-4 py-6">
+    <div className="max-w-2xl sticky lg:relative left-30 top-0  lg:top-[-550px]   px-4 py-6">
   <h2 className="text-xl font-semibold mb-4">{pointerSection.name}</h2>
   <div className="bg-white rounded-xl border p-5 shadow-md grid grid-cols-1 md:grid-cols-2 gap-6">
     

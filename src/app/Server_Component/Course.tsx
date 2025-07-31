@@ -16,7 +16,7 @@ export default async function Course(  ) {
   const group_join_engagement: SectionValue[] = group_join_engagement_section?.values || [];
 
   return (
-<section className="max-w-2xl sticky lg:relative left-30 top-0 lg:top-[-470px] px-4 py-4 space-y-10">
+<section className="max-w-2xl sticky lg:relative left-30 top-0 lg:top-[-540px] px-4 py-4 space-y-10">
   <div className="space-y-6">
     <h2 className="text-xl font-semibold">Instructor</h2>
     <div className="bg-white border shadow-xl rounded-xl p-4 flex flex-col sm:flex-row items-center gap-4">

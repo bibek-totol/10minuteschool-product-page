@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Thumbs, Scrollbar, Zoom, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -11,25 +11,20 @@ import "swiper/css/zoom";
 
 import Image from "next/image";
 import  { CircleChevronLeft, CircleChevronRight } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { getApiData } from "../lib/api/getApiData";
+import { Skeletonn } from "./Skeleton";
 
 export default function PriceCard() {
-  const [apidata, setdata] = useState<any>([]);
+  
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await fetch(
-          "https://api.10minuteschool.com/discovery-service/api/v1/products/ielts-course"
-        );
-        const json = await response.json();
-        setdata(json);
-      } catch (err) {
-        console.error("Fetch error:", err);
-      }
-    };
-    getData();
-  }, []);
+  const { isPending, data } = useQuery({
+    queryKey: ['apidata'],
+    queryFn: async () => getApiData(),
+  })
+
+  if (isPending) return <Skeletonn/>
 
   return (
     
@@ -56,7 +51,7 @@ export default function PriceCard() {
   zoom={true}
   style={{ width: "100%", height: "320px" }}
 >
-  {apidata?.data?.media?.map((item: any, index: number) => {
+  {data?.data?.media?.map((item: any, index: number) => {
     if (index === 1) return null; 
 
     return (
@@ -97,7 +92,7 @@ export default function PriceCard() {
           watchSlidesProgress
           style={{ marginTop: "10px", height: "100px" }}
         >
-          {apidata?.data?.media?.map((item: any, index: number) => {
+          {data?.data?.media?.map((item: any, index: number) => {
   const imageRegex = /\.(jpeg|jpg|gif|png|webp|bmp|svg)$/i;
   const isImage = imageRegex.test(item.resource_value);
   if (index === 1) return null; 
@@ -146,7 +141,7 @@ export default function PriceCard() {
             This course includes:
           </h3>
           <ul className="space-y-2 text-sm text-gray-700">
-            {apidata?.data?.checklist?.map((coursefeature: any, index: number) => (
+            { data?.data?.checklist?.map((coursefeature: any, index: number) => (
               <li key={index} className="flex items-center gap-2">
                 <img
                   src={coursefeature.icon}
