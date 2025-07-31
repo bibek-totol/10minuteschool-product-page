@@ -17,7 +17,8 @@ bun dev
 ```
 # Project UI(Focused)
 
-![Screenshot_12](https://github.com/user-attachments/assets/e2e33a3a-18de-4189-a270-65733b318cbe)
+![Screenshot_2](https://github.com/user-attachments/assets/99cbb18b-1c50-4c80-bb6e-b79aef49c0c1)
+
 ![Screenshot_13](https://github.com/user-attachments/assets/35c5f051-e3d1-413f-9275-ba59cb9cd9fa)
 ![Screenshot_14](https://github.com/user-attachments/assets/687301b7-cc2c-4da2-94cd-29ec3c38948f)
 ![Screenshot_15](https://github.com/user-attachments/assets/02790479-4ef1-40e7-b548-f1173e92f76b)
