@@ -6,14 +6,8 @@ import { CourseExclusiveFeature } from "./Server_Component/CourseExclusiveFeatur
 import CourseHighlights from "./Server_Component/CourseHighlights";
 import { getApiData } from "./lib/api/getApiData";
 
-interface Props {
-  searchParams?: {
-    lang?: string;
-  };
-}
 
-
-export default async function Home({ searchParams }: Props) {
+export default async function Home({ searchParams }: { searchParams?: { lang?: string } }) {
 
   const lang = searchParams?.lang || "bn";
   const apiData = await getApiData(lang);
