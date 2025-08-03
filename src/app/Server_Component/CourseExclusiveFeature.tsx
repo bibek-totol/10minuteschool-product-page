@@ -1,19 +1,17 @@
 import { Check } from "lucide-react";
 import Image from "next/image";
-import { getApiData } from "../lib/api/getApiData";
-import { Section, SectionValue } from "../types/ielts-course-types";
+import { Section, SectionValue} from "../types/ielts-course-types";
 
 
 
-export async function CourseExclusiveFeature( ) {
-  const apidata = await getApiData(); 
-  const { data } = apidata;
+export async function CourseExclusiveFeature({data}:{data:any}) {
+  
   const courseExclusiveSection = data.sections.find(
     (section: Section) => section.type === "feature_explanations"
   );
   const courseExclusive: SectionValue[] = courseExclusiveSection?.values || [];
   return (
-    <div className="mt-8 max-w-2xl sticky lg:relative left-30 top-0  lg:top-[-550px]  px-4 ">
+    <div className="mt-8 max-w-2xl sticky lg:relative left-30 top-0  lg:top-[-630px]  px-4 ">
   <h2 className="text-xl font-semibold mb-4">{courseExclusiveSection?.name}</h2>
   <div className="space-y-10 bg-white p-6 rounded-xl shadow border">
         {courseExclusive.map((item, index: number) => (

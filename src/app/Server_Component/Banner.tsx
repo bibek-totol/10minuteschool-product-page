@@ -2,16 +2,16 @@ import Image from "next/image";
 import bg from "../../../public/assets/bannerMain.jpeg";
 import top from "../../../public/assets/bannertop.jpeg";
 import { FaStar } from "react-icons/fa";
-
-import { getApiData } from "../lib/api/getApiData";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
+import StateValue from "../Client_Component/statevalue";
+
 
 const PriceCard = dynamic(() => import("../Client_Component/PriceCard"));
 
-export default async function Banner() {
-  const apidata = await getApiData();
-  const { data } = apidata;
+export default async function Banner({data}:{data:any}) {
+  
+  
 
   const stripHtmlTags = (htmlString: string) => {
     return htmlString?.replace(/<[^>]*>/g, "");
@@ -30,9 +30,12 @@ export default async function Banner() {
         alt="Main Banner"
       />
 
+
+
+
       <div className="relative z-20 -mt-[200px] sm:-mt-[250px] md:-mt-[300px] lg:-mt-[340px] flex flex-col lg:flex-row justify-center  gap-10 lg:gap-60 px-4 sm:px-8 md:px-16 lg:px-20 pt-6 md:pt-0">
         <div className="text-white max-w-xl mb-6 lg:mb-0 lg:mr-10 ">
-          <h1 className="text-xl sm:text-2xl md:text-4xl font-bold mb-3">
+          <h1 className="text-[15px] md:text-4xl font-bold mb-3">
             {data?.title}
           </h1>
           <div className="mb-3 flex gap-3 items-center flex-wrap">
@@ -40,25 +43,32 @@ export default async function Banner() {
               {[...Array(5)].map((_, i) => (
                 <FaStar
                   key={i}
-                  className="text-yellow-500 text-base sm:text-lg md:text-xl"
+                  className="text-yellow-500 text-base sm:text-[12px] md:text-xl"
                 />
               ))}
             </div>
-            <p className="text-sm sm:text-3xl md:text-lg">
+            <p className="text-[11px] md:text-lg">
               (82.6% শিক্ষার্থী কোর্স শেষে ৫ রেটিং দিয়েছেন)
             </p>
           </div>
 
-          <p className="text-gray-300 text-sm sm:text-base">
+          <p className="text-gray-300 text-[11px] md:text-sm">
             {data?.description && stripHtmlTags(data?.description)}
           </p>
         </div>
 
-        <div className="w-full sm:w-auto">
+
+
+        
+
+
+        <div className="w-full sm:w-auto ">
+
+        <StateValue />
           <Suspense
             fallback={<div className="">Loading price card...</div>}
           >
-            <PriceCard />
+            <PriceCard data={data} />
           </Suspense>
         </div>
       </div>

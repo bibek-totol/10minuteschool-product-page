@@ -82,4 +82,6 @@ export interface Data {
     color: string;
     text: string;
   }
+
+  export type SupportedLanguages = 'bn' | 'en';
   

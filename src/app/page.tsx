@@ -4,10 +4,15 @@ import Course from "./Server_Component/Course";
 import { CourseDetails } from "./Server_Component/CourseDetails";
 import { CourseExclusiveFeature } from "./Server_Component/CourseExclusiveFeature";
 import CourseHighlights from "./Server_Component/CourseHighlights";
+import { getApiData } from "./lib/api/getApiData";
 
 
 
-export default function Home() {
+export default async function Home({ searchParams }: { searchParams: { lang?: string } }) {
+
+  const lang = searchParams.lang || "bn";
+  const apiData = await getApiData(lang);
+  const { data } = apiData;
   
 
   return (
@@ -15,11 +20,11 @@ export default function Home() {
       
       
 
-      <Banner  />
-      <Course  />
-      <CourseHighlights  />
-      <CourseDetails />
-      <CourseExclusiveFeature  />
+      <Banner data={data} />
+      <Course data={data}   />
+      <CourseHighlights data={data} />
+      <CourseDetails data={data} />
+      <CourseExclusiveFeature data={data} />
     </div>
   );
 }

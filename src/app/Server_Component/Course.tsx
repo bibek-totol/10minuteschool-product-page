@@ -1,12 +1,10 @@
 import Image from "next/image";
-import { getApiData } from "../lib/api/getApiData";
-import { Section, SectionValue } from "../types/ielts-course-types";
+import { Section, SectionValue} from "../types/ielts-course-types";
 
 
 
-export default async function Course(  ) {
-  const apidata  = await getApiData();
-  const { data }  = apidata;
+export default async function Course({data}:{data:any}) {
+  
 
   const featuresSection = data.sections.find((section: Section) => section.type === "features");
   const features: SectionValue[] = featuresSection?.values || [];
@@ -16,7 +14,7 @@ export default async function Course(  ) {
   const group_join_engagement: SectionValue[] = group_join_engagement_section?.values || [];
 
   return (
-<section className="max-w-2xl sticky lg:relative left-30 top-0 lg:top-[-540px] px-4 py-4 space-y-10">
+<section className="max-w-2xl sticky lg:relative left-30 top-0 lg:top-[-630px] px-4 py-4 space-y-10">
   <div className="space-y-6">
     <h2 className="text-xl font-semibold">Instructor</h2>
     <div className="bg-white border shadow-xl rounded-xl p-4 flex flex-col sm:flex-row items-center gap-4">

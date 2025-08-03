@@ -6,22 +6,21 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { getApiData } from "../lib/api/getApiData";
-import { Section, SectionValue } from "../types/ielts-course-types";
+
+import { Section, SectionValue} from "../types/ielts-course-types";
 
 
   
 
-export async function CourseDetails() {
-  const apidata = await getApiData();
-  const { data } = apidata;
+export async function CourseDetails({data}:{data:any}) {
+  
   const courseDetailsSection = data.sections.find(
     (section: Section) => section.type === "about"
   );
   const courseDetails: SectionValue[] = courseDetailsSection?.values || [];
 
   return (
-    <div className="max-w-2xl sticky lg:relative left-30 top-0  lg:top-[-550px]  px-4 py-6">
+    <div className="max-w-2xl sticky lg:relative left-30 top-0  lg:top-[-630px]  px-4 py-6">
 
       <h2 className="text-xl font-semibold mb-3">
         {courseDetailsSection?.name}
