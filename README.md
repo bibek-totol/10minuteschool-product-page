@@ -4,7 +4,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 # 🌐 Next.js Page (Bangla-English, Optimized & Responsive)
 
-This is a **fully optimized, responsive, and localized** web page built with the **Next.js App Router**, using **TypeScript**, **Tailwind CSS**, and **TanStack React Query**. It includes **Bangla and English language support**, powerful API data filtering, server-side rendering (SSR), and caching for performance and SEO.
+This is a **fully optimized, responsive, and localized** web page built with the **Next.js App Router**, using **TypeScript**, **Tailwind CSS**, and **TanStack React Query**. It includes **Bangla and English language support**, powerful API data filtering, server-side rendering (SSR), and caching for performance and SEO.<br/><br/>
+Public API url: https://api.10minuteschool.com/discovery-service/api/v1/products/ielts-course?lang=en
 
 ---
 
