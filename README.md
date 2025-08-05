@@ -62,7 +62,8 @@ yarn dev
 
 # Project UI(Focused)
 
-![Screenshot_2](https://github.com/user-attachments/assets/99cbb18b-1c50-4c80-bb6e-b79aef49c0c1)
+![Screenshot_1](https://github.com/user-attachments/assets/093f0614-12dd-4f78-b07e-4fbcb61b47c4)
+
 
 ![Screenshot_13](https://github.com/user-attachments/assets/35c5f051-e3d1-413f-9275-ba59cb9cd9fa)
 ![Screenshot_14](https://github.com/user-attachments/assets/687301b7-cc2c-4da2-94cd-29ec3c38948f)
