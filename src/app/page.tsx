@@ -7,7 +7,7 @@ import CourseHighlights from "./Server_Component/CourseHighlights";
 import { getApiData } from "./lib/api/getApiData";
 
 
-export default async function Home({ searchParams }: { searchParams?: { lang?: string } }) {
+export default async function Home({ searchParams }: { searchParams: any }) {
 
   const lang = searchParams?.lang || "bn";
   const apiData = await getApiData(lang);
