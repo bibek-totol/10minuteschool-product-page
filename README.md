@@ -1,6 +1,12 @@
 # Live Site Link: https://10minuteschool-product-page-xxu6.vercel.app/
 
+# Video Description: 
+https://github.com/user-attachments/assets/7826dc35-bb91-4246-b4a7-73f5887193c3
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+[Frontend Engineer (Level 1) Assessment Brief.docx](https://github.com/user-attachments/files/21688528/Frontend.Engineer.Level.1.Assessment.Brief.docx)
+
 
 # 🌐 Next.js Page (Bangla-English, Optimized & Responsive)
 
